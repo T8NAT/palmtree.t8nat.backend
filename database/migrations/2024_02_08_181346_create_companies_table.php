@@ -1,0 +1,43 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('companies', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('street')->nullable();
+            $table->string('neighbourhood')->nullable();
+            $table->string('address_lat')->nullable();
+            $table->string('address_lng')->nullable();
+            $table->integer('postalCode')->nullable();
+            $table->string('sub_address')->nullable();
+            $table->string('sub_city')->nullable();
+            $table->string('sub_street')->nullable();
+            $table->string('sub_neighbourhood')->nullable();
+            $table->string('sub_address_lat')->nullable();
+            $table->string('sub_address_lng')->nullable();
+            $table->integer('sub_postalCode')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('companies');
+    }
+};

@@ -1,0 +1,102 @@
+{
+    "menu": [{
+            "url": "/",
+            "name": "Home",
+            "icon": "menu-icon tf-icons ti ti-smart-home",
+            "slug": "pages-home",
+            "role": ["admin"]
+        },
+        {
+            "icon": "menu-icon tf-icons ti ti-users",
+            "name": "users",
+            "slug": "users",
+            "role": ["admin"],
+            "submenu": [{
+                    "url": "users",
+                    "name": "list",
+                    "slug": "users.index"
+                },
+                {
+                    "url": "users/create",
+                    "name": "create",
+                    "slug": "users.create"
+                }
+            ]
+        },
+        {
+            "icon": "menu-icon tf-icons ti ti-building",
+            "name": "companies",
+            "slug": "companies",
+            "role": ["admin"],
+            "submenu": [{
+                    "url": "companies",
+                    "name": "list",
+                    "slug": "companies.index"
+                },
+                {
+                    "url": "companies/create",
+                    "name": "create",
+                    "slug": "companies.create"
+                }
+            ]
+        },
+        {
+            "icon": "menu-icon tf-icons ti ti-shopping-cart",
+            "name": "orders",
+            "slug": "orders",
+            "role": ["admin"],
+            "submenu": [{
+                    "url": "orders",
+                    "name": "list",
+                    "slug": "orders.index"
+                },
+                {
+                    "url": "orders/create",
+                    "name": "create",
+                    "slug": "orders.create"
+                }
+
+
+            ]
+        },
+        {
+            "icon": "menu-icon tf-icons ti ti-shopping-cart",
+            "name": "my-orders",
+            "slug": "my-orders",
+            "role": ["company"],
+            "submenu": [{
+                    "url": "my-orders",
+                    "name": "list",
+                    "slug": "my-orders.index"
+                },
+                {
+                    "url": "my-orders/create",
+                    "name": "create",
+                    "slug": "my-orders.create"
+                }
+            ]
+        },
+        {
+            "icon": "menu-icon tf-icons ti ti-gift",
+            "name": "offers",
+            "slug": "offers",
+            "role": ["admin"],
+            "submenu": [{
+                "url": "orders/with-offers",
+                "name": "list",
+                "slug": "offers.show_orders_with_offers"
+            }]
+        },
+        {
+            "icon": "menu-icon tf-icons ti ti-bell",
+            "name": "Notifications",
+            "slug": "notifications",
+            "role": ["admin"],
+            "submenu": [{
+                "url": "notifications",
+                "name": "list",
+                "slug": "notifications"
+            }]
+        }
+    ]
+}
